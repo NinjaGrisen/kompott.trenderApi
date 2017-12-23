@@ -4,7 +4,6 @@ const PORT = process.env.PORT || 5000
 const cors = require('cors');
 const app = express();
 
-app.use(cors());
 var whitelist = ['http://example1.com', 'http://example2.com']
 var corsOptions = {
   origin: function (origin, callback) {
