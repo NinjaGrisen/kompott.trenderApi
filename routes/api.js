@@ -35,7 +35,13 @@ router.get('/trends', (req, res) => {
         res.send(JSON.parse('err'));
         retun;
     }
-   
+
+    for(var i = 0; i < requestQuery.length; i++) {
+        if(requestQuery[i].includes('+')) {
+            requestQuery[i] = requestQuery[i].replace('+', " ");
+        }   
+    }
+
     googleTrends.interestOverTime({
         keyword: requestQuery, 
         startTime: new Date('2017-01-01'),
