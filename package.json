@@ -8,8 +8,12 @@
     "google-trends-api": "^4.3.0",
     "nodemon": "^1.14.3"
   },
+  "engines": {
+    "node": "8.9.0"
+  },
   "devDependencies": {},
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
